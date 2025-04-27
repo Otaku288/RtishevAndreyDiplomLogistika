@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Оформление заказа</h1>
+
+<style>
+    .center-field {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        }
+
+    #id_warehouse_address {
+        width: 300px;
+        height: 50px;
+        resize: none;
+    }
+</style>
+
+<p>Товар: {{ product.name }}</p>
+<form method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="id_quantity" class="form-label">Количество</label>
+        {{ form.quantity }}
+    </div>
+    <div class="mb-3 center-field">
+        <label for="id_warehouse_address" class="form-label">Адрес склада</label>
+        {{ form.warehouse_address }}
+    </div>
+    <div class="mb-3">
+        <label for="id_delivery_date" class="form-label">Дата доставки</label>
+        {{ form.delivery_date }}
+    </div>
+    <button type="submit" class="btn btn-primary">Оформить заказ</button>
+</form>
+{% endblock %}

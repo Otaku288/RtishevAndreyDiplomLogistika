@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Заказ успешно оформлен!</h1>
+<p>Номер заказа: {{ order.id }}</p>
+<p>Товар: {{ order.product.name }}</p>
+<p>Статус: {{ order.status }}</p>
+<a href="{% url 'company_orders' %}" class="btn btn-primary">Мои заказы</a>
+{% endblock %}

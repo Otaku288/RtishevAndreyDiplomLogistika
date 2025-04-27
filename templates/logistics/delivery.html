@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    
+
+    .delivery-page {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 0 20px;
+        color: #333;
+    }
+
+    .delivery-page h1 {
+        text-align: center;
+        font-size: 36px;
+        color: #007bff;
+        margin-bottom: 40px;
+    }
+
+    .delivery-page h2 {
+        font-size: 24px;
+        color: #0056b3;
+        margin-top: 40px;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 5px;
+    }
+
+    .delivery-page p {
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 15px;
+    }
+
+    .delivery-page ul {
+        margin: 10px 0 30px 20px;
+        padding-left: 0;
+    }
+
+    .delivery-page ul li {
+        font-size: 16px;
+        line-height: 1.6;
+        list-style-type: disc;
+        margin-bottom: 5px;
+    }
+
+    .highlight {
+        background-color: #fff3cd;
+        border-left: 5px solid #ffc107;
+        padding: 15px 20px;
+        margin-top: 30px;
+        font-size: 16px;
+        color: #856404;
+    }
+
+    @media (max-width: 600px) {
+        .delivery-page {
+            padding: 0 15px;
+        }
+
+        .delivery-page h1 {
+            font-size: 28px;
+        }
+
+        .delivery-page h2 {
+            font-size: 20px;
+        }
+    }
+</style>
+
+<div class="delivery-page">
+    <h1>Информация о доставке</h1>
+
+    <h2>Доставка по Москве и области</h2>
+    <p>Мы осуществляем доставку мебели по Москве и Московской области в кратчайшие сроки. Время и стоимость согласовываются индивидуально в зависимости от объема заказа и адреса доставки.</p>
+    <ul>
+        <li>Срок доставки: 1–2 рабочих дня</li>
+        <li>Доставка осуществляется в будние дни с 09:00 до 18:00</li>
+        <li>Подъём на этаж и сборка оплачиваются отдельно</li>
+    </ul>
+
+    <h2>Доставка по России</h2>
+    <p>Отправка заказов по регионам осуществляется через надёжные транспортные компании. Мы подбираем оптимальный вариант с учётом сроков и стоимости.</p>
+    <ul>
+        <li>Выбор ТК по согласованию</li>
+        <li>Отгрузка со склада — в течение 1–2 рабочих дней</li>
+        <li>Возможна доставка «до двери» или «до терминала»</li>
+    </ul>
+
+    <h2>Самовывоз</h2>
+    <p>Вы можете самостоятельно забрать мебель с нашего склада. Для этого необходимо предварительно согласовать дату и время с менеджером.</p>
+    <ul>
+        <li>Адрес склада: г. Москва, ул. Примерная, д. 45</li>
+        <li>Время работы: Пн–Пт, с 10:00 до 17:00</li>
+        <li>При себе необходимо иметь номер заказа</li>
+    </ul>
+
+    <div class="highlight">
+        ⚠️ Важно: для всех видов доставки мы рекомендуем заранее уточнять детали с нашими специалистами. Это поможет избежать задержек и обеспечит качественную логистику вашего заказа.
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+   
+
+    .contact-container {
+        max-width: 900px;
+        margin: 50px auto;
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 36px;
+        color: #007bff;
+        text-align: center;
+        margin-bottom: 40px;
+        font-weight: bold;
+    }
+
+    .contact-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        gap: 20px;
+    }
+
+    .contact-card {
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        padding: 25px;
+        text-align: center;
+        transition: transform 0.3s ease;
+        flex: 1 1 calc(50% - 10px); /* 2 карточки в ряд с отступом */
+        min-width: 260px;
+    }
+
+    .contact-card:hover {
+        transform: scale(1.05);
+    }
+
+    .contact-icon {
+        font-size: 30px;
+        color: #28a745;
+        margin-bottom: 15px;
+    }
+
+    .contact-title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .contact-info {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+        .section-title {
+            font-size: 28px;
+        }
+
+        .contact-row {
+            flex-direction: column;
+        }
+
+        .contact-card {
+            flex: 1 1 100%;
+        }
+    }
+</style>
+
+<div class="contact-container">
+    <h1 class="section-title">Свяжитесь с нами</h1>
+
+    <!-- Первый ряд -->
+    <div class="contact-row">
+        <div class="contact-card">
+            <div class="contact-icon">📞</div>
+            <div class="contact-title">Телефон</div>
+            <div class="contact-info">+7 (123) 456-78-90</div>
+        </div>
+        <div class="contact-card">
+            <div class="contact-icon">📧</div>
+            <div class="contact-title">Email</div>
+            <div class="contact-info">info@mebel-logistics.ru</div>
+        </div>
+    </div>
+
+    <!-- Второй ряд -->
+    <div class="contact-row">
+        <div class="contact-card">
+            <div class="contact-icon">📍</div>
+            <div class="contact-title">Адрес</div>
+            <div class="contact-info">г. Москва, ул. Примерная, 12, офис 34</div>
+        </div>
+        <div class="contact-card">
+            <div class="contact-icon">⏰</div>
+            <div class="contact-title">Режим работы</div>
+            <div class="contact-info">Пн–Пт: 09:00–18:00<br>Сб–Вс: выходной</div>
+        </div>
+    </div>
+</div>
+{% endblock %}
